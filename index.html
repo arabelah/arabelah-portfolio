@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arabelah May Ancheta — Software Engineer</title>
+  <meta name="description" content="Portfolio of Arabelah May Ancheta, Junior Programmer specializing in ERP systems, automation flows, and database management." />
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- NAV / SYSTEM BAR                              -->
+  <!-- ============================================ -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__brand">
+        <span class="dot dot--live" aria-hidden="true"></span>
+        people<span class="topbar__sep">/</span>arabelah_ancheta
+      </span>
+      <nav class="topbar__nav" aria-label="Primary">
+        <a href="#profile">profile</a>
+        <a href="#experience">experience</a>
+        <a href="#skills">skills</a>
+        <a href="#projects">projects</a>
+        <a href="#education">education</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================ -->
+    <!-- HERO — rendered as a database record card     -->
+    <!-- ============================================ -->
+    <section class="hero" id="profile">
+      <div class="record">
+
+        <div class="record__head">
+          <span class="record__table">TABLE: users</span>
+          <span class="record__id">record_id · 0001</span>
+        </div>
+
+        <div class="record__body">
+          <div class="record__photo-wrap">
+            <img src="assets/profile.png" alt="Portrait of Arabelah May Ancheta" class="record__photo" width="170" height="170" />
+            <span class="status-chip"><span class="dot dot--live" aria-hidden="true"></span>status: active</span>
+          </div>
+
+          <div class="record__fields">
+            <h1 class="record__name">Arabelah&nbsp;May&nbsp;Ancheta</h1>
+            <p class="record__role">Junior&nbsp;Programmer · Software&nbsp;Engineer</p>
+
+            <dl class="field-list">
+              <div class="field-row">
+                <dt>role</dt>
+                <dd>"Junior Programmer"</dd>
+              </div>
+              <div class="field-row">
+                <dt>org</dt>
+                <dd>"Zyberlab IT Solutions"</dd>
+              </div>
+              <div class="field-row">
+                <dt>location</dt>
+                <dd>"Santa Fe, Agoo, La Union, PH"</dd>
+              </div>
+              <div class="field-row">
+                <dt>stack</dt>
+                <dd>["C", "Java", "JavaScript", "Python", "SQL"]</dd>
+              </div>
+              <div class="field-row">
+                <dt>focus</dt>
+                <dd>"ERP systems · automation · QA"</dd>
+              </div>
+            </dl>
+
+            <p class="record__bio">
+              Software engineer with hands-on experience supporting <strong>Likha ERP</strong> — a Directus-based
+              platform — across bug testing, database integrity, and Accounts Payable / Accounts Receivable
+              workflows. Comfortable going from a broken flow to a working one, and from a messy dataset
+              to a validated one.
+            </p>
+
+            <div class="record__actions">
+              <a class="btn btn--primary" href="#experience">view_experience()</a>
+              <a class="btn btn--ghost" href="mailto:anchetaarabelah@gmail.com">send_email()</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero__caption">// this page is structured like the systems Arabelah actually builds: typed records, logged flows, validated fields.</p>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- EXPERIENCE — rendered as flow log entries     -->
+    <!-- ============================================ -->
+    <section class="section" id="experience">
+      <h2 class="section__title"><span class="section__index">flow_log</span>Experience</h2>
+
+      <div class="log">
+        <div class="log__entry">
+          <div class="log__rail">
+            <span class="log__node log__node--active"></span>
+            <span class="log__line"></span>
+          </div>
+          <div class="log__content">
+            <div class="log__meta">
+              <span class="log__ts">2024 — present</span>
+              <span class="tag tag--running">RUNNING</span>
+            </div>
+            <h3 class="log__title">Junior Programmer <span class="log__org">@ Zyberlab IT Solutions</span></h3>
+            <ul class="log__steps">
+              <li><span class="step-key">step.qa</span> Performed bug testing and troubleshooting to improve system functionality and reliability.</li>
+              <li><span class="step-key">step.erp</span> Supported Accounts Payable and Accounts Receivable processes within Likha ERP.</li>
+              <li><span class="step-key">step.data</span> Validated data accuracy and maintained database integrity.</li>
+              <li><span class="step-key">step.auto</span> Contributed to process automation and system improvement initiatives.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SKILLS — rendered as schema fields           -->
+    <!-- ============================================ -->
+    <section class="section" id="skills">
+      <h2 class="section__title"><span class="section__index">schema</span>Skills</h2>
+
+      <div class="schema-grid">
+        <div class="schema-card">
+          <h3 class="schema-card__title">technical_skills <span class="schema-card__type">array[string]</span></h3>
+          <ul class="chip-list">
+            <li class="chip">C</li>
+            <li class="chip">Java</li>
+            <li class="chip">JavaScript</li>
+            <li class="chip">Python</li>
+            <li class="chip">HTML</li>
+            <li class="chip">CSS</li>
+            <li class="chip">Microsoft Access SQL</li>
+            <li class="chip">Figma</li>
+          </ul>
+        </div>
+
+        <div class="schema-card">
+          <h3 class="schema-card__title">soft_skills <span class="schema-card__type">array[string]</span></h3>
+          <ul class="chip-list">
+            <li class="chip chip--alt">Fast Learner</li>
+            <li class="chip chip--alt">Time Management</li>
+            <li class="chip chip--alt">Attention to Detail</li>
+            <li class="chip chip--alt">Adaptability</li>
+          </ul>
+        </div>
+
+        <div class="schema-card">
+          <h3 class="schema-card__title">languages <span class="schema-card__type">array[string]</span></h3>
+          <ul class="chip-list">
+            <li class="chip chip--alt">English</li>
+            <li class="chip chip--alt">Filipino</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PROJECTS — rendered as deployed apps          -->
+    <!-- ============================================ -->
+    <section class="section" id="projects">
+      <h2 class="section__title"><span class="section__index">deployments</span>Academic Projects</h2>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-card__head">
+            <span class="tag tag--build">BUILD</span>
+            <span class="project-card__stack">Microsoft Office Access</span>
+          </div>
+          <h3 class="project-card__title">CareConnect</h3>
+          <p class="project-card__sub">Health Admission System</p>
+          <ul class="project-card__list">
+            <li>Automated scheduling and prioritization</li>
+            <li>Real-time bed and room availability</li>
+            <li>Integration with medical team and resources</li>
+            <li>Rescheduling and cancellations management</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__head">
+            <span class="tag tag--build">BUILD</span>
+            <span class="project-card__stack">Android Studio · Kotlin</span>
+          </div>
+          <h3 class="project-card__title">Click Eat</h3>
+          <p class="project-card__sub">Food Ordering App</p>
+          <ul class="project-card__list">
+            <li>User account management</li>
+            <li>Restaurant search and food ordering</li>
+            <li>Address management</li>
+            <li>Multiple payment and order tracking</li>
+            <li>Personalization and order history</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- EDUCATION                                     -->
+    <!-- ============================================ -->
+    <section class="section" id="education">
+      <h2 class="section__title"><span class="section__index">record</span>Education</h2>
+
+      <div class="edu-card">
+        <div class="edu-card__row">
+          <div>
+            <h3 class="edu-card__title">Bachelor of Science in Computer Science</h3>
+            <p class="edu-card__sub">Don Mariano Marcos Memorial State University (DMMMSU)</p>
+          </div>
+          <span class="tag tag--running">2023 — present</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACT / FOOTER                              -->
+    <!-- ============================================ -->
+    <section class="section section--contact" id="contact">
+      <h2 class="section__title"><span class="section__index">connect</span>Contact</h2>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="tel:+639566985886">
+          <span class="contact-card__label">phone</span>
+          <span class="contact-card__value">+63 956 698 5886</span>
+        </a>
+        <a class="contact-card" href="mailto:anchetaarabelah@gmail.com">
+          <span class="contact-card__label">email</span>
+          <span class="contact-card__value">anchetaarabelah@gmail.com</span>
+        </a>
+        <div class="contact-card">
+          <span class="contact-card__label">location</span>
+          <span class="contact-card__value">Santa Fe, Agoo, La Union, PH</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Arabelah May Ancheta. Built &amp; version-controlled with care.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
