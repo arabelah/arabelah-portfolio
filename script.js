@@ -43,4 +43,33 @@
     "[flow] page_load:complete — welcome!",
   ];
   log.forEach((line) => console.log("%c" + line, "color:#d98e3b;font-family:monospace;"));
+  // --- 3. Screenshot lightbox -------------------------------------------
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  if (lightbox && lightboxImg && lightboxClose) {
+    document.querySelectorAll(".shot-thumb").forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        const full = thumb.getAttribute("data-full");
+        const alt = thumb.querySelector("img")?.getAttribute("alt") || "";
+        lightboxImg.src = full;
+        lightboxImg.alt = alt;
+        lightbox.hidden = false;
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.hidden = true;
+      lightboxImg.src = "";
+    };
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  }
 })();
