@@ -3,19 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arabelah May Ancheta — Software Engineer</title>
+  <title>Arabelah May Ancheta — Junior Programmer</title>
   <meta name="description" content="Portfolio of Arabelah May Ancheta, Junior Programmer specializing in ERP systems, automation flows, and database management." />
   <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ============================================ -->
-  <!-- NAV / SYSTEM BAR                              -->
-  <!-- ============================================ -->
+  <!-- 3D FLOATING BACKGROUND -->
+  <div class="scene-bg" aria-hidden="true">
+    <div class="scene-bg__gradient"></div>
+    <div class="db-cube-wrap db-cube-wrap--1"><div class="db-cube db-cube--1"><span></span><span></span><span></span><span></span><span></span></div></div>
+    <div class="db-cube-wrap db-cube-wrap--2"><div class="db-cube db-cube--2"><span></span><span></span><span></span><span></span><span></span></div></div>
+    <div class="db-cube-wrap db-cube-wrap--3"><div class="db-cube db-cube--3"><span></span><span></span><span></span><span></span><span></span></div></div>
+    <div class="db-cube-wrap db-cube-wrap--4"><div class="db-cube db-cube--4"><span></span><span></span><span></span><span></span><span></span></div></div>
+    <div class="db-cube-wrap db-cube-wrap--5"><div class="db-cube db-cube--5"><span></span><span></span><span></span><span></span><span></span></div></div>
+    <div class="db-row db-row--1"></div>
+    <div class="db-row db-row--2"></div>
+    <div class="db-row db-row--3"></div>
+  </div>
+
+  <!-- NAV -->
   <header class="topbar">
     <div class="topbar__inner">
       <span class="topbar__brand">
@@ -28,27 +39,37 @@
         <a href="#skills">skills</a>
         <a href="#projects">projects</a>
         <a href="#education">education</a>
+        <a href="#guestbook">guestbook</a>
         <a href="#contact">contact</a>
       </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
     </div>
   </header>
 
   <main>
 
-    <!-- ============================================ -->
-    <!-- HERO — rendered as a database record card     -->
-    <!-- ============================================ -->
-    <section class="hero" id="profile">
-      <div class="record">
+    <!-- HERO -->
+    <section class="hero reveal" id="profile">
+      <div class="hero__bg-rings" aria-hidden="true">
+        <div class="ring ring--1"></div>
+        <div class="ring ring--2"></div>
+        <div class="ring ring--3"></div>
+        <div class="ring ring--pulse"></div>
+      </div>
 
+      <div class="record">
         <div class="record__head">
           <span class="record__table">TABLE: users</span>
           <span class="record__id">record_id · 0001</span>
         </div>
-
         <div class="record__body">
           <div class="record__photo-wrap">
-            <img src="assets/profile.png" alt="Portrait of Arabelah May Ancheta" class="record__photo" width="170" height="170" />
+            <div class="photo-ring-wrap">
+              <div class="photo-orbit" aria-hidden="true">
+                <span class="orbit-dot"></span>
+              </div>
+              <img src="assets/profile.png" alt="Portrait of Arabelah May Ancheta" class="record__photo" width="170" height="170" />
+            </div>
             <span class="status-chip"><span class="dot dot--live" aria-hidden="true"></span>status: active</span>
           </div>
 
@@ -66,10 +87,6 @@
                 <dd>"Zyberlab IT Solutions"</dd>
               </div>
               <div class="field-row">
-                <dt>location</dt>
-                <dd>"Santa Fe, Agoo, La Union, PH"</dd>
-              </div>
-              <div class="field-row">
                 <dt>stack</dt>
                 <dd>["C", "Java", "JavaScript", "Python", "SQL"]</dd>
               </div>
@@ -82,25 +99,21 @@
             <p class="record__bio">
               Junior Programmer with hands-on experience supporting <strong>Likha ERP</strong> — a Directus-based
               platform — across bug testing, database integrity, and Accounts Payable / Accounts Receivable
-              workflows. Comfortable going from a broken flow to a working one, and from a messy dataset
-              to a validated one.
+              workflows. Comfortable going from a broken flow to a working one, and from a messy dataset to a validated one.
             </p>
 
             <div class="record__actions">
               <a class="btn btn--primary" href="#experience">view_experience()</a>
-              <a class="btn btn--ghost" href="mailto:anchetaarabelah@gmail.com">send_email()</a>
+              <a class="btn btn--ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=anchetaarabelah@gmail.com" target="_blank" rel="noopener noreferrer">send_email()</a>
             </div>
           </div>
         </div>
       </div>
-
       <p class="hero__caption">// this page is structured like the systems Arabelah actually builds: typed records, logged flows, validated fields.</p>
     </section>
 
-    <!-- ============================================ -->
-    <!-- EXPERIENCE — rendered as flow log entries     -->
-    <!-- ============================================ -->
-    <section class="section" id="experience">
+    <!-- EXPERIENCE -->
+    <section class="section reveal" id="experience">
       <h2 class="section__title"><span class="section__index">flow_log</span>Experience</h2>
 
       <div class="log">
@@ -112,7 +125,7 @@
           <div class="log__content">
             <div class="log__meta">
               <span class="log__ts">May - June 2026</span>
-              <span class="tag tag--running">DONE</span>
+              <span class="tag tag--done">DONE</span>
             </div>
             <h3 class="log__title">Junior Programmer <span class="log__org">@ Zyberlab IT Solutions</span></h3>
             <ul class="log__steps">
@@ -121,17 +134,20 @@
               <li><span class="step-key">step.data</span> Validated data accuracy and maintained database integrity.</li>
               <li><span class="step-key">step.auto</span> Contributed to process automation and system improvement initiatives.</li>
             </ul>
+            <div class="exp-shots">
+              <button class="shot-thumb" data-full="experience-screenshots/erp-01.png"><img src="experience-screenshots/erp-01.png" alt="AR Financial Report collection in Likha ERP" loading="lazy" /></button>
+              <button class="shot-thumb" data-full="experience-screenshots/erp-02.png"><img src="experience-screenshots/erp-02.png" alt="Automation flow in Likha ERP" loading="lazy" /></button>
+              <button class="shot-thumb" data-full="experience-screenshots/erp-03.png"><img src="experience-screenshots/erp-03.png" alt="Run Script operation in Likha ERP flow" loading="lazy" /></button>
+              <button class="shot-thumb" data-full="experience-screenshots/erp-04.png"><img src="experience-screenshots/erp-04.png" alt="Flow log and debug output" loading="lazy" /></button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- SKILLS — rendered as schema fields           -->
-    <!-- ============================================ -->
-    <section class="section" id="skills">
+    <!-- SKILLS -->
+    <section class="section reveal" id="skills">
       <h2 class="section__title"><span class="section__index">schema</span>Skills</h2>
-
       <div class="schema-grid">
         <div class="schema-card">
           <h3 class="schema-card__title">technical_skills <span class="schema-card__type">array[string]</span></h3>
@@ -146,7 +162,6 @@
             <li class="chip">Figma</li>
           </ul>
         </div>
-
         <div class="schema-card">
           <h3 class="schema-card__title">soft_skills <span class="schema-card__type">array[string]</span></h3>
           <ul class="chip-list">
@@ -156,7 +171,6 @@
             <li class="chip chip--alt">Adaptability</li>
           </ul>
         </div>
-
         <div class="schema-card">
           <h3 class="schema-card__title">languages <span class="schema-card__type">array[string]</span></h3>
           <ul class="chip-list">
@@ -167,14 +181,14 @@
       </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- PROJECTS — rendered as deployed apps          -->
-    <!-- ============================================ -->
-    <section class="section" id="projects">
+    <!-- PROJECTS -->
+    <section class="section reveal" id="projects">
       <h2 class="section__title"><span class="section__index">deployments</span>Academic Projects</h2>
 
       <div class="project-grid">
-        <article class="project-card">
+
+        <!-- CareConnect -->
+        <article class="project-card project-card--careconnect">
           <div class="project-card__head">
             <span class="tag tag--build">BUILD</span>
             <span class="project-card__stack">Microsoft Office Access</span>
@@ -187,17 +201,15 @@
             <li>Integration with medical team and resources</li>
             <li>Rescheduling and cancellations management</li>
           </ul>
-          <div class="shot-grid">
-            <button class="shot-thumb" data-full="project-screenshots/careconnect/01-login.png">
-              <img src="project-screenshots/careconnect/01-login.png" alt="CareConnect login screen" loading="lazy" />
-            </button>
-            <button class="shot-thumb" data-full="project-screenshots/careconnect/02-signup.png">
-              <img src="project-screenshots/careconnect/02-signup.png" alt="CareConnect sign up form" loading="lazy" />
-            </button>
+          <div class="shot-grid shot-grid--large">
+            <button class="shot-thumb" data-full="project-screenshots/careconnect/01.png"><img src="project-screenshots/careconnect/01.png" alt="CareConnect login screen" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/careconnect/02.png"><img src="project-screenshots/careconnect/02.png" alt="CareConnect signup form" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/careconnect/03.png"><img src="project-screenshots/careconnect/03.png" alt="CareConnect main menu" loading="lazy" /></button>
           </div>
         </article>
 
-        <article class="project-card">
+        <!-- Click Eat -->
+        <article class="project-card project-card--clickeat">
           <div class="project-card__head">
             <span class="tag tag--build">BUILD</span>
             <span class="project-card__stack">Android Studio · Kotlin</span>
@@ -212,29 +224,47 @@
             <li>Personalization and order history</li>
           </ul>
           <div class="shot-grid">
-            <button class="shot-thumb" data-full="project-screenshots/clickeat/01-login.png">
-              <img src="project-screenshots/clickeat/01-login.png" alt="Click Eat login screen" loading="lazy" />
-            </button>
-            <button class="shot-thumb" data-full="project-screenshots/clickeat/02-home.png">
-              <img src="project-screenshots/clickeat/02-home.png" alt="Click Eat home screen with restaurants" loading="lazy" />
-            </button>
-            <button class="shot-thumb" data-full="project-screenshots/clickeat/03-restaurant-menu.png">
-              <img src="project-screenshots/clickeat/03-restaurant-menu.png" alt="Click Eat restaurant menu screen" loading="lazy" />
-            </button>
-            <button class="shot-thumb" data-full="project-screenshots/clickeat/04-profile.png">
-              <img src="project-screenshots/clickeat/04-profile.png" alt="Click Eat profile screen" loading="lazy" />
-            </button>
+            <button class="shot-thumb" data-full="project-screenshots/clickeat/01.png"><img src="project-screenshots/clickeat/01.png" alt="Click Eat login" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/clickeat/02.png"><img src="project-screenshots/clickeat/02.png" alt="Click Eat home" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/clickeat/03.png"><img src="project-screenshots/clickeat/03.png" alt="Click Eat restaurant menu" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/clickeat/04.png"><img src="project-screenshots/clickeat/04.png" alt="Click Eat profile" loading="lazy" /></button>
           </div>
         </article>
+
+        <!-- Highlands Café POS -->
+        <article class="project-card project-card--highlands">
+          <div class="project-card__head">
+            <span class="tag tag--build">BUILD</span>
+            <span class="project-card__stack">UI Design · Figma</span>
+          </div>
+          <h3 class="project-card__title">Highlands Café</h3>
+          <p class="project-card__sub">Point of Sale System — UI Design</p>
+          <ul class="project-card__list">
+            <li>Sales dashboard with revenue charts and top-selling menus</li>
+            <li>Transaction history with filtering by payment method and date</li>
+            <li>Inventory management with stock status tracking</li>
+            <li>Menu management for admin and cashier roles</li>
+            <li>Staff-side ordering interface with real-time cart and checkout</li>
+          </ul>
+          <div class="shot-grid shot-grid--wide">
+            <button class="shot-thumb" data-full="project-screenshots/highlands/login.png"><img src="project-screenshots/highlands/login.png" alt="Highlands Café login" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/highlands/dashboard.png"><img src="project-screenshots/highlands/dashboard.png" alt="Admin dashboard" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/highlands/history.png"><img src="project-screenshots/highlands/history.png" alt="Transaction history" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/highlands/inventory.png"><img src="project-screenshots/highlands/inventory.png" alt="Inventory management" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/highlands/menu.png"><img src="project-screenshots/highlands/menu.png" alt="Menu management" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/highlands/staffside.png"><img src="project-screenshots/highlands/staffside.png" alt="Staff ordering interface" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/highlands/dashboardlogout.png"><img src="project-screenshots/highlands/dashboardlogout.png" alt="Logout confirmation modal" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/highlands/profile.png"><img src="project-screenshots/highlands/profile.png" alt="Staff ordering interface" loading="lazy" /></button>
+            <button class="shot-thumb" data-full="project-screenshots/highlands/forgotpassword.png"><img src="project-screenshots/highlands/forgotpassword.png" alt="Logout confirmation modal" loading="lazy" /></button>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- EDUCATION                                     -->
-    <!-- ============================================ -->
-    <section class="section" id="education">
+    <!-- EDUCATION -->
+    <section class="section reveal" id="education">
       <h2 class="section__title"><span class="section__index">record</span>Education</h2>
-
       <div class="edu-card">
         <div class="edu-card__row">
           <div>
@@ -246,37 +276,115 @@
       </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- CONTACT / FOOTER                              -->
-    <!-- ============================================ -->
-    <section class="section section--contact" id="contact">
-      <h2 class="section__title"><span class="section__index">connect</span>Contact</h2>
+    <!-- GUESTBOOK -->
+    <section class="section reveal" id="guestbook">
+      <h2 class="section__title"><span class="section__index">insert_record</span>Guestbook</h2>
+      <p class="guestbook__desc">Leave a message — it's saved to a real database and shows up for everyone who visits.</p>
 
-      <div class="contact-grid">
-        <a class="contact-card" href="tel:+639566985886">
-          <span class="contact-card__label">phone</span>
-          <span class="contact-card__value">+63 956 698 5886</span>
-        </a>
-        <a class="contact-card" href="mailto:anchetaarabelah@gmail.com">
-          <span class="contact-card__label">email</span>
-          <span class="contact-card__value">anchetaarabelah@gmail.com</span>
-        </a>
-        <div class="contact-card">
-          <span class="contact-card__label">location</span>
-          <span class="contact-card__value">Santa Fe, Agoo, La Union, PH</span>
+      <div class="guestbook__form-wrap">
+        <div class="guestbook__form">
+          <div class="gb-field">
+            <label class="gb-label" for="gb-name">name <span class="gb-type">string</span></label>
+            <input class="gb-input" type="text" id="gb-name" placeholder='"Your name"' maxlength="60" autocomplete="off" />
+          </div>
+          <div class="gb-field">
+            <label class="gb-label" for="gb-msg">message <span class="gb-type">string</span></label>
+            <textarea class="gb-input gb-textarea" id="gb-msg" placeholder='"Leave a message..."' maxlength="280" rows="3"></textarea>
+          </div>
+          <button class="btn btn--primary gb-submit" id="gbSubmit">sign_guestbook()</button>
+          <p class="gb-status" id="gbStatus"></p>
         </div>
+
+        <div class="guestbook__mascot" aria-hidden="true">
+          <svg viewBox="0 0 320 320" class="mascot-svg" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="bodyGrad" cx="35%" cy="28%" r="75%">
+                <stop offset="0%" stop-color="#3d465e"/>
+                <stop offset="55%" stop-color="#242938"/>
+                <stop offset="100%" stop-color="#15171f"/>
+              </radialGradient>
+              <linearGradient id="envGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffcf8f"/>
+                <stop offset="100%" stop-color="#f2a84f"/>
+              </linearGradient>
+              <filter id="mascotGlow" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="7" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <ellipse class="mascot-shadow" cx="160" cy="292" rx="72" ry="12" fill="rgba(0,0,0,0.4)"/>
+
+            <g class="mascot-float">
+              <circle cx="160" cy="160" r="92" fill="url(#bodyGrad)" stroke="rgba(242,168,79,0.28)" stroke-width="2"/>
+              <ellipse cx="128" cy="118" rx="30" ry="18" fill="rgba(255,255,255,0.07)"/>
+              <circle cx="133" cy="166" r="7" fill="#ffcf8f"/>
+              <circle cx="187" cy="166" r="7" fill="#ffcf8f"/>
+              <circle cx="110" cy="180" r="10" fill="rgba(242,168,79,0.18)"/>
+              <circle cx="210" cy="180" r="10" fill="rgba(242,168,79,0.18)"/>
+              <path d="M138 192 Q160 208 182 192" stroke="#7fddc7" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <line x1="160" y1="68" x2="160" y2="42" stroke="#f2a84f" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="160" cy="38" r="6" fill="#ffcf8f" filter="url(#mascotGlow)"/>
+            </g>
+
+            <g class="mascot-envelope" filter="url(#mascotGlow)">
+              <rect x="206" y="128" width="72" height="50" rx="7" fill="url(#envGrad)"/>
+              <path d="M206 131 L242 159 L278 131" stroke="#1a1206" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+
+            <g class="mascot-trail">
+              <circle class="trail-dot trail-dot--1" cx="270" cy="145" r="4" fill="#ffcf8f"/>
+              <circle class="trail-dot trail-dot--2" cx="270" cy="145" r="3" fill="#7fddc7"/>
+              <circle class="trail-dot trail-dot--3" cx="270" cy="145" r="3.5" fill="#ffcf8f"/>
+            </g>
+
+            <g class="mascot-sparkle">
+              <circle cx="250" cy="70" r="3" fill="#7fddc7"/>
+              <circle cx="284" cy="210" r="2.5" fill="#ffcf8f"/>
+              <circle cx="78" cy="70" r="2.2" fill="#7fddc7"/>
+            </g>
+          </svg>
+          <p class="mascot-caption">// message.send(gbEntries) — always listening</p>
+        </div>
+      </div>
+
+      <div class="guestbook__entries" id="gbEntries">
+        <div class="gb-loading" id="gbLoading">// loading entries...</div>
       </div>
     </section>
 
+  <!-- CONTACT -->
+<section class="section reveal section--contact" id="contact">
+  <h2 class="section__title"><span class="section__index">connect</span>Contact</h2>
+  <div class="contact-grid">
+    <a class="contact-card" href="https://mail.google.com/mail/?view=cm&fs=1&to=anchetaarabelah@gmail.com" target="_blank" rel="noopener noreferrer">
+      <span class="contact-card__label">email</span>
+      <span class="contact-card__value">anchetaarabelah@gmail.com</span>
+    </a>
+    <a class="contact-card" href="https://www.facebook.com/arabelah.ancheta.2024" target="_blank" rel="noopener noreferrer">
+      <span class="contact-card__label">facebook</span>
+      <span class="contact-card__value">facebook.com/arabelah.ancheta.2024</span>
+    </a>
+    <a class="contact-card" href="https://www.instagram.com/bila_miii/" target="_blank" rel="noopener noreferrer">
+      <span class="contact-card__label">instagram</span>
+      <span class="contact-card__value">instagram.com/bila_miii/</span>
+    </a>
+  </div>
+</section>
+
   </main>
 
+  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" hidden>
     <button class="lightbox__close" id="lightboxClose" aria-label="Close image">&times;</button>
     <img class="lightbox__img" id="lightboxImg" src="" alt="" />
   </div>
 
   <footer class="footer">
-    <p>© 2026 Arabelah May Ancheta. Built &amp; version-controlled with care.</p>
+    <p>© 2026 Arabelah May Ancheta · Built with care, version-controlled with git, connected to Supabase.</p>
   </footer>
 
   <script src="script.js"></script>
