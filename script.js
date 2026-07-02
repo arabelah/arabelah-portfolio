@@ -208,4 +208,34 @@
     console.log("%c" + line, "color:#d98e3b;font-family:monospace;");
   });
 
+// 7. Theme Toggle
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.querySelector(".theme-icon");
+
+if (themeToggle) {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+    themeIcon.textContent = "☀️";
+  } else {
+    themeIcon.textContent = "🌙";
+  }
+
+  themeToggle.addEventListener("click", function () {
+    const currentTheme =
+      document.documentElement.getAttribute("data-theme");
+
+    if (currentTheme === "light") {
+      document.documentElement.removeAttribute("data-theme");
+      localStorage.setItem("theme", "dark");
+      themeIcon.textContent = "🌙";
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+      themeIcon.textContent = "☀️";
+    }
+  });
+}
+
 })();
